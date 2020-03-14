@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color = "tertiary">
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title> Detalle de la casa </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)= "onDeleteCasa()"><ion-icon name="trash-outline"></ion-icon></ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-no-padding">
+      <ion-col class="ion-no-padding">
+        <ion-img [src]="casaDetail.imageUrl">
+        </ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h1 class="ion-text-center">{{casaDetail.titulo}}</h1>
+        <h5 class ="ion-text-center">Alumnos</h5>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item *ngFor="let item of casaDetail.alumnos">
+            {{item}}
+          </ion-item>
+        </ion-list>  
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

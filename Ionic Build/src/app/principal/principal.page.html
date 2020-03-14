@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+    <ion-title >FIRE EMBLEM THREE HOUSES</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="../../assets/Three Houses.jpg"> 
+  <ion-title>Casas de Garreg Mach Monastery</ion-title> <br>
+  <ion-list>
+    <ion-item *ngFor="let casa of casas" [routerLink]="['./',casa.id]">
+      <ion-avatar slot="start">
+        <ion-img [src]="casa.imageUrl"></ion-img>
+      </ion-avatar>
+      <ion-label>{{casa.titulo}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
